@@ -1,0 +1,878 @@
+[
+  {
+    "id": "adn-lni-001",
+    "name": "Sitio Malinao Coffee Farm",
+    "slug": "sitio-malinao-coffee-farm",
+    "status": "active",
+    "municipality": "Las Nieves",
+    "barangay": "Malicato",
+    "geotag": {
+      "lat": 8.7433,
+      "lng": 125.6047,
+      "elevationMasl": 620
+    },
+    "areaHectares": 12.5,
+    "varieties": [
+      "Arabica (Typica)",
+      "Robusta"
+    ],
+    "soilType": "Clay loam",
+    "farmers": {
+      "count": 34,
+      "association": "Malicato Coffee Growers Association",
+      "leadFarmer": "Rodel M. Aparicio",
+      "notes": "Mixed smallholder plots, 0.25–0.75 ha each."
+    },
+    "motherGarden": {
+      "exists": true,
+      "type": "Nursery",
+      "name": "Malicato Communal Nursery",
+      "nurseryPlants": 18000,
+      "establishedYear": 2022
+    },
+    "seedTraceability": {
+      "source": "DA-RFO XIII Coffee Nursery, Butuan City",
+      "origin": "Cavite Arabica mother trees (via DA seed distribution)",
+      "batch": "ARB-2022-014",
+      "yearAcquired": 2022,
+      "certification": "DA-BPI accredited source"
+    },
+    "focalPerson": {
+      "name": "Engr. Marilyn C. Sabalza",
+      "position": "Municipal Agriculturist",
+      "office": "LGU Las Nieves — Office of the Municipal Agriculturist",
+      "contact": "0917-000-0001"
+    },
+    "topography": {
+      "terrain": "Rolling to hilly",
+      "slopePercent": "18–30%",
+      "elevationRangeMasl": "540–720",
+      "climate": "Type II — no pronounced dry season"
+    },
+    "plantingMaterials": {
+      "fertilizers": [
+        "Complete 14-14-14",
+        "Urea 46-0-0",
+        "Vermicast"
+      ],
+      "soilAmendments": [
+        "Agricultural lime",
+        "Carbonized rice hull"
+      ],
+      "pestManagement": [
+        "Neem-based botanical spray",
+        "Manual berry borer sanitation"
+      ],
+      "practices": [
+        "Shade-grown under falcata and banana",
+        "Contour planting",
+        "Mulching with coffee pulp"
+      ]
+    },
+    "yieldEstimateKgPerYear": 9400,
+    "photos": [],
+    "notes": "Highest-elevation Arabica site in the province profile.",
+    "createdAt": "2026-01-14",
+    "updatedAt": "2026-08-01"
+  },
+  {
+    "id": "adn-jab-002",
+    "name": "Bunga Highland Coffee Cluster",
+    "slug": "bunga-highland-coffee-cluster",
+    "status": "active",
+    "municipality": "Jabonga",
+    "barangay": "Bunga",
+    "geotag": {
+      "lat": 9.3419,
+      "lng": 125.5147,
+      "elevationMasl": 310
+    },
+    "areaHectares": 8,
+    "varieties": [
+      "Robusta",
+      "Excelsa"
+    ],
+    "soilType": "Sandy loam",
+    "farmers": {
+      "count": 21,
+      "association": "Bunga Farmers Irrigators Association — Coffee Group",
+      "leadFarmer": "Nenita B. Lumbay",
+      "notes": "Intercropped with coconut."
+    },
+    "motherGarden": {
+      "exists": true,
+      "type": "Greenhouse",
+      "name": "Jabonga Municipal Greenhouse",
+      "nurseryPlants": 9500,
+      "establishedYear": 2023
+    },
+    "seedTraceability": {
+      "source": "PhilCAFE / ACDI-VOCA distribution",
+      "origin": "Bukidnon Robusta clonal garden",
+      "batch": "ROB-2023-007",
+      "yearAcquired": 2023,
+      "certification": "PhilCAFE verified"
+    },
+    "focalPerson": {
+      "name": "Mr. Alfredo T. Ronquillo",
+      "position": "Agricultural Technologist",
+      "office": "LGU Jabonga — OMAg",
+      "contact": "0917-000-0002"
+    },
+    "topography": {
+      "terrain": "Gently rolling",
+      "slopePercent": "8–18%",
+      "elevationRangeMasl": "260–380",
+      "climate": "Type II"
+    },
+    "plantingMaterials": {
+      "fertilizers": [
+        "Complete 14-14-14",
+        "Chicken dung compost"
+      ],
+      "soilAmendments": [
+        "Vermicompost"
+      ],
+      "pestManagement": [
+        "Trichoderma soil drench",
+        "Pruning sanitation"
+      ],
+      "practices": [
+        "Coconut–coffee intercrop",
+        "Ring weeding"
+      ]
+    },
+    "yieldEstimateKgPerYear": 5200,
+    "photos": [],
+    "notes": "Near Lake Mainit; good road access.",
+    "createdAt": "2026-01-20",
+    "updatedAt": "2026-07-18"
+  },
+  {
+    "id": "adn-kit-003",
+    "name": "Songkoy Robusta Estate",
+    "slug": "songkoy-robusta-estate",
+    "status": "active",
+    "municipality": "Kitcharao",
+    "barangay": "Songkoy",
+    "geotag": {
+      "lat": 9.4494,
+      "lng": 125.5744,
+      "elevationMasl": 240
+    },
+    "areaHectares": 15.2,
+    "varieties": [
+      "Robusta"
+    ],
+    "soilType": "Clay loam with gravel",
+    "farmers": {
+      "count": 40,
+      "association": "Songkoy Agrarian Reform Beneficiaries MPC",
+      "leadFarmer": "Jimmy P. Danlag",
+      "notes": "ARB cooperative-managed consolidated area."
+    },
+    "motherGarden": {
+      "exists": true,
+      "type": "Nursery",
+      "name": "Songkoy ARB Nursery",
+      "nurseryPlants": 24000,
+      "establishedYear": 2021
+    },
+    "seedTraceability": {
+      "source": "DAR–DA convergence program",
+      "origin": "Cagayan de Oro Robusta clonal cuttings",
+      "batch": "ROB-2021-031",
+      "yearAcquired": 2021,
+      "certification": "DA-BPI accredited source"
+    },
+    "focalPerson": {
+      "name": "Ms. Grace L. Amoguis",
+      "position": "Municipal Agriculturist",
+      "office": "LGU Kitcharao — OMAg",
+      "contact": "0917-000-0003"
+    },
+    "topography": {
+      "terrain": "Hilly",
+      "slopePercent": "18–30%",
+      "elevationRangeMasl": "180–330",
+      "climate": "Type II"
+    },
+    "plantingMaterials": {
+      "fertilizers": [
+        "Complete 14-14-14",
+        "Urea 46-0-0",
+        "Foliar micronutrient"
+      ],
+      "soilAmendments": [
+        "Agricultural lime",
+        "Compost"
+      ],
+      "pestManagement": [
+        "Berry borer traps",
+        "Botanical insecticide"
+      ],
+      "practices": [
+        "Rejuvenation pruning",
+        "Cover cropping with peanut"
+      ]
+    },
+    "yieldEstimateKgPerYear": 13800,
+    "photos": [],
+    "notes": "Largest single contiguous coffee area in the north cluster.",
+    "createdAt": "2026-02-02",
+    "updatedAt": "2026-08-05"
+  },
+  {
+    "id": "adn-san-004",
+    "name": "Curva Coffee Demo Farm",
+    "slug": "curva-coffee-demo-farm",
+    "status": "active",
+    "municipality": "Santiago",
+    "barangay": "Curva",
+    "geotag": {
+      "lat": 9.2733,
+      "lng": 125.5533,
+      "elevationMasl": 120
+    },
+    "areaHectares": 4.3,
+    "varieties": [
+      "Robusta",
+      "Liberica (Barako)"
+    ],
+    "soilType": "Silty clay",
+    "farmers": {
+      "count": 12,
+      "association": "Curva Rural Improvement Club",
+      "leadFarmer": "Editha S. Gulle",
+      "notes": "LGU-supported demonstration site."
+    },
+    "motherGarden": {
+      "exists": true,
+      "type": "Greenhouse",
+      "name": "Santiago Demo Greenhouse",
+      "nurseryPlants": 4200,
+      "establishedYear": 2024
+    },
+    "seedTraceability": {
+      "source": "Provincial Agriculture Office, Agusan del Norte",
+      "origin": "Batangas Liberica seedlings + local Robusta selections",
+      "batch": "MIX-2024-003",
+      "yearAcquired": 2024,
+      "certification": "Provincial nursery record"
+    },
+    "focalPerson": {
+      "name": "Mr. Reynaldo C. Bacus",
+      "position": "Agricultural Technologist",
+      "office": "LGU Santiago — OMAg",
+      "contact": "0917-000-0004"
+    },
+    "topography": {
+      "terrain": "Flat to gently sloping",
+      "slopePercent": "3–8%",
+      "elevationRangeMasl": "90–150",
+      "climate": "Type II"
+    },
+    "plantingMaterials": {
+      "fertilizers": [
+        "Organic foliar",
+        "Complete 14-14-14"
+      ],
+      "soilAmendments": [
+        "Vermicast",
+        "Carbonized rice hull"
+      ],
+      "pestManagement": [
+        "IPM field school protocol"
+      ],
+      "practices": [
+        "Demo plots for pruning trials",
+        "Drip irrigation on 1 ha"
+      ]
+    },
+    "yieldEstimateKgPerYear": 2100,
+    "photos": [],
+    "notes": "Used for farmer field schools.",
+    "createdAt": "2026-02-11",
+    "updatedAt": "2026-06-30"
+  },
+  {
+    "id": "adn-tub-005",
+    "name": "Tinigbasan Slope Coffee Farm",
+    "slug": "tinigbasan-slope-coffee-farm",
+    "status": "active",
+    "municipality": "Tubay",
+    "barangay": "Tinigbasan",
+    "geotag": {
+      "lat": 9.1697,
+      "lng": 125.5236,
+      "elevationMasl": 180
+    },
+    "areaHectares": 6.7,
+    "varieties": [
+      "Robusta"
+    ],
+    "soilType": "Loam",
+    "farmers": {
+      "count": 18,
+      "association": "Tinigbasan Upland Farmers Association",
+      "leadFarmer": "Fernando D. Pelaez",
+      "notes": ""
+    },
+    "motherGarden": {
+      "exists": false,
+      "type": null,
+      "name": null,
+      "nurseryPlants": 0,
+      "establishedYear": null
+    },
+    "seedTraceability": {
+      "source": "Songkoy ARB Nursery (Kitcharao)",
+      "origin": "Cagayan de Oro Robusta clonal cuttings (2nd generation)",
+      "batch": "ROB-2023-019",
+      "yearAcquired": 2023,
+      "certification": "Traced to DA-BPI accredited parent stock"
+    },
+    "focalPerson": {
+      "name": "Ms. Lorna F. Villamor",
+      "position": "Municipal Agriculturist",
+      "office": "LGU Tubay — OMAg",
+      "contact": "0917-000-0005"
+    },
+    "topography": {
+      "terrain": "Steep upland",
+      "slopePercent": "30–45%",
+      "elevationRangeMasl": "140–260",
+      "climate": "Type II"
+    },
+    "plantingMaterials": {
+      "fertilizers": [
+        "Complete 14-14-14",
+        "Compost"
+      ],
+      "soilAmendments": [
+        "Agricultural lime"
+      ],
+      "pestManagement": [
+        "Manual sanitation"
+      ],
+      "practices": [
+        "Natural vegetative strips",
+        "Contour canals"
+      ]
+    },
+    "yieldEstimateKgPerYear": 4100,
+    "photos": [],
+    "notes": "Sources planting material from Kitcharao — good traceability example.",
+    "createdAt": "2026-02-19",
+    "updatedAt": "2026-07-02"
+  },
+  {
+    "id": "adn-cab-006",
+    "name": "Mabini Ridge Coffee Farm",
+    "slug": "mabini-ridge-coffee-farm",
+    "status": "active",
+    "municipality": "Cabadbaran City",
+    "barangay": "Mabini",
+    "geotag": {
+      "lat": 9.1219,
+      "lng": 125.5344,
+      "elevationMasl": 210
+    },
+    "areaHectares": 9.8,
+    "varieties": [
+      "Robusta",
+      "Excelsa"
+    ],
+    "soilType": "Clay loam",
+    "farmers": {
+      "count": 27,
+      "association": "Cabadbaran Coffee Producers Cooperative",
+      "leadFarmer": "Antonio R. Silvano",
+      "notes": "Cooperative operates a small wet mill."
+    },
+    "motherGarden": {
+      "exists": true,
+      "type": "Nursery",
+      "name": "Cabadbaran City Coffee Nursery",
+      "nurseryPlants": 15000,
+      "establishedYear": 2022
+    },
+    "seedTraceability": {
+      "source": "City Agriculture Office, Cabadbaran",
+      "origin": "Sultan Kudarat Excelsa + local Robusta",
+      "batch": "EXC-2022-005",
+      "yearAcquired": 2022,
+      "certification": "City nursery record"
+    },
+    "focalPerson": {
+      "name": "Engr. Paulo B. Requerme",
+      "position": "City Agriculturist",
+      "office": "Cabadbaran City — City Agriculture Office",
+      "contact": "0917-000-0006"
+    },
+    "topography": {
+      "terrain": "Rolling",
+      "slopePercent": "8–18%",
+      "elevationRangeMasl": "160–290",
+      "climate": "Type II"
+    },
+    "plantingMaterials": {
+      "fertilizers": [
+        "Complete 14-14-14",
+        "Urea 46-0-0",
+        "Coffee pulp compost"
+      ],
+      "soilAmendments": [
+        "Vermicompost",
+        "Lime"
+      ],
+      "pestManagement": [
+        "Beauveria bassiana",
+        "Berry borer traps"
+      ],
+      "practices": [
+        "Shade management",
+        "Selective handpicking"
+      ]
+    },
+    "yieldEstimateKgPerYear": 8600,
+    "photos": [],
+    "notes": "Has post-harvest facility — potential consolidation point.",
+    "createdAt": "2026-03-01",
+    "updatedAt": "2026-08-10"
+  },
+  {
+    "id": "adn-rtr-007",
+    "name": "Panaytayon Smallholder Coffee Plots",
+    "slug": "panaytayon-smallholder-coffee-plots",
+    "status": "expansion",
+    "municipality": "Remedios T. Romualdez",
+    "barangay": "Panaytayon",
+    "geotag": {
+      "lat": 9.0575,
+      "lng": 125.5031,
+      "elevationMasl": 150
+    },
+    "areaHectares": 3.5,
+    "varieties": [
+      "Robusta"
+    ],
+    "soilType": "Sandy clay loam",
+    "farmers": {
+      "count": 9,
+      "association": "Panaytayon Farmers Association",
+      "leadFarmer": "Melchor A. Tinio",
+      "notes": "Newly organized group."
+    },
+    "motherGarden": {
+      "exists": false,
+      "type": null,
+      "name": null,
+      "nurseryPlants": 0,
+      "establishedYear": null
+    },
+    "seedTraceability": {
+      "source": "Cabadbaran City Coffee Nursery",
+      "origin": "Local Robusta selections",
+      "batch": "ROB-2025-002",
+      "yearAcquired": 2025,
+      "certification": "City nursery record"
+    },
+    "focalPerson": {
+      "name": "Ms. Cristina M. Dagohoy",
+      "position": "Municipal Agriculturist",
+      "office": "LGU RTR — OMAg",
+      "contact": "0917-000-0007"
+    },
+    "topography": {
+      "terrain": "Gently rolling",
+      "slopePercent": "8–15%",
+      "elevationRangeMasl": "120–190",
+      "climate": "Type II"
+    },
+    "plantingMaterials": {
+      "fertilizers": [
+        "Complete 14-14-14"
+      ],
+      "soilAmendments": [
+        "Compost"
+      ],
+      "pestManagement": [
+        "Manual sanitation"
+      ],
+      "practices": [
+        "Newly established — 2025 planting"
+      ]
+    },
+    "yieldEstimateKgPerYear": 400,
+    "photos": [],
+    "notes": "Not yet at full bearing; first harvest expected 2027.",
+    "createdAt": "2026-03-15",
+    "updatedAt": "2026-08-12"
+  },
+  {
+    "id": "adn-mag-008",
+    "name": "Caloc-an Coffee & Cacao Farm",
+    "slug": "caloc-an-coffee-cacao-farm",
+    "status": "active",
+    "municipality": "Magallanes",
+    "barangay": "Caloc-an",
+    "geotag": {
+      "lat": 8.9986,
+      "lng": 125.5219,
+      "elevationMasl": 60
+    },
+    "areaHectares": 5.4,
+    "varieties": [
+      "Robusta",
+      "Liberica (Barako)"
+    ],
+    "soilType": "Alluvial loam",
+    "farmers": {
+      "count": 14,
+      "association": "Caloc-an Agri Ventures Association",
+      "leadFarmer": "Susana T. Ompad",
+      "notes": "Coffee–cacao integrated system."
+    },
+    "motherGarden": {
+      "exists": true,
+      "type": "Greenhouse",
+      "name": "Caloc-an Seedling House",
+      "nurseryPlants": 6300,
+      "establishedYear": 2023
+    },
+    "seedTraceability": {
+      "source": "Private nursery, Butuan City",
+      "origin": "Davao Liberica scions",
+      "batch": "LIB-2023-011",
+      "yearAcquired": 2023,
+      "certification": "Supplier affidavit only — for verification"
+    },
+    "focalPerson": {
+      "name": "Mr. Danilo E. Cortes",
+      "position": "Agricultural Technologist",
+      "office": "LGU Magallanes — OMAg",
+      "contact": "0917-000-0008"
+    },
+    "topography": {
+      "terrain": "Flat lowland",
+      "slopePercent": "0–3%",
+      "elevationRangeMasl": "30–90",
+      "climate": "Type II"
+    },
+    "plantingMaterials": {
+      "fertilizers": [
+        "Complete 14-14-14",
+        "Organic fertilizer (chicken-based)"
+      ],
+      "soilAmendments": [
+        "Carbonized rice hull"
+      ],
+      "pestManagement": [
+        "IPM",
+        "Trichoderma"
+      ],
+      "practices": [
+        "Cacao shade intercrop",
+        "Raised beds for drainage"
+      ]
+    },
+    "yieldEstimateKgPerYear": 3000,
+    "photos": [],
+    "notes": "Seed source needs certification follow-up.",
+    "createdAt": "2026-03-28",
+    "updatedAt": "2026-07-25"
+  },
+  {
+    "id": "adn-bue-009",
+    "name": "Rizal Upland Coffee Farm",
+    "slug": "rizal-upland-coffee-farm",
+    "status": "active",
+    "municipality": "Buenavista",
+    "barangay": "Rizal",
+    "geotag": {
+      "lat": 8.9803,
+      "lng": 125.4083,
+      "elevationMasl": 200
+    },
+    "areaHectares": 7.1,
+    "varieties": [
+      "Robusta"
+    ],
+    "soilType": "Clay loam",
+    "farmers": {
+      "count": 22,
+      "association": "Rizal Upland Growers Association",
+      "leadFarmer": "Pedro L. Casiño",
+      "notes": ""
+    },
+    "motherGarden": {
+      "exists": true,
+      "type": "Nursery",
+      "name": "Buenavista Communal Nursery",
+      "nurseryPlants": 11000,
+      "establishedYear": 2022
+    },
+    "seedTraceability": {
+      "source": "DA-RFO XIII Coffee Nursery, Butuan City",
+      "origin": "Bukidnon Robusta clonal garden",
+      "batch": "ROB-2022-022",
+      "yearAcquired": 2022,
+      "certification": "DA-BPI accredited source"
+    },
+    "focalPerson": {
+      "name": "Ms. Jocelyn R. Ayuban",
+      "position": "Municipal Agriculturist",
+      "office": "LGU Buenavista — OMAg",
+      "contact": "0917-000-0009"
+    },
+    "topography": {
+      "terrain": "Rolling to hilly",
+      "slopePercent": "15–30%",
+      "elevationRangeMasl": "150–280",
+      "climate": "Type II"
+    },
+    "plantingMaterials": {
+      "fertilizers": [
+        "Complete 14-14-14",
+        "Urea 46-0-0"
+      ],
+      "soilAmendments": [
+        "Lime",
+        "Compost"
+      ],
+      "pestManagement": [
+        "Berry borer traps",
+        "Sanitation pruning"
+      ],
+      "practices": [
+        "Falcata shade",
+        "Contour planting"
+      ]
+    },
+    "yieldEstimateKgPerYear": 6300,
+    "photos": [],
+    "notes": "",
+    "createdAt": "2026-04-05",
+    "updatedAt": "2026-07-14"
+  },
+  {
+    "id": "adn-car-010",
+    "name": "Vinapor Coastal Highland Coffee",
+    "slug": "vinapor-coastal-highland-coffee",
+    "status": "pilot",
+    "municipality": "Carmen",
+    "barangay": "Vinapor",
+    "geotag": {
+      "lat": 8.9139,
+      "lng": 125.2214,
+      "elevationMasl": 95
+    },
+    "areaHectares": 2.8,
+    "varieties": [
+      "Excelsa",
+      "Robusta"
+    ],
+    "soilType": "Sandy loam",
+    "farmers": {
+      "count": 8,
+      "association": "Vinapor Coastal Farmers Group",
+      "leadFarmer": "Ricardo B. Malinao",
+      "notes": "Pilot area under provincial diversification program."
+    },
+    "motherGarden": {
+      "exists": false,
+      "type": null,
+      "name": null,
+      "nurseryPlants": 0,
+      "establishedYear": null
+    },
+    "seedTraceability": {
+      "source": "Provincial Agriculture Office, Agusan del Norte",
+      "origin": "Cabadbaran Excelsa mother trees",
+      "batch": "EXC-2025-001",
+      "yearAcquired": 2025,
+      "certification": "Provincial nursery record"
+    },
+    "focalPerson": {
+      "name": "Mr. Elmer G. Pacatang",
+      "position": "Municipal Agriculturist",
+      "office": "LGU Carmen — OMAg",
+      "contact": "0917-000-0010"
+    },
+    "topography": {
+      "terrain": "Coastal hills",
+      "slopePercent": "8–20%",
+      "elevationRangeMasl": "40–140",
+      "climate": "Type II"
+    },
+    "plantingMaterials": {
+      "fertilizers": [
+        "Organic fertilizer",
+        "Complete 14-14-14"
+      ],
+      "soilAmendments": [
+        "Compost",
+        "Carbonized rice hull"
+      ],
+      "pestManagement": [
+        "Manual sanitation"
+      ],
+      "practices": [
+        "Windbreak rows",
+        "Mulching"
+      ]
+    },
+    "yieldEstimateKgPerYear": 300,
+    "photos": [],
+    "notes": "Pilot — salt spray tolerance being observed.",
+    "createdAt": "2026-05-02",
+    "updatedAt": "2026-08-15"
+  },
+  {
+    "id": "adn-nas-011",
+    "name": "Talisay Barangay Coffee Plots",
+    "slug": "talisay-barangay-coffee-plots",
+    "status": "active",
+    "municipality": "Nasipit",
+    "barangay": "Talisay",
+    "geotag": {
+      "lat": 8.9942,
+      "lng": 125.34,
+      "elevationMasl": 75
+    },
+    "areaHectares": 3.9,
+    "varieties": [
+      "Robusta"
+    ],
+    "soilType": "Loam",
+    "farmers": {
+      "count": 11,
+      "association": "Talisay Barangay Farmers Association",
+      "leadFarmer": "Wilma C. Estoque",
+      "notes": ""
+    },
+    "motherGarden": {
+      "exists": true,
+      "type": "Nursery",
+      "name": "Talisay Barangay Nursery",
+      "nurseryPlants": 3400,
+      "establishedYear": 2024
+    },
+    "seedTraceability": {
+      "source": "Buenavista Communal Nursery",
+      "origin": "Bukidnon Robusta clonal garden (2nd generation)",
+      "batch": "ROB-2024-016",
+      "yearAcquired": 2024,
+      "certification": "Traced to DA-BPI accredited parent stock"
+    },
+    "focalPerson": {
+      "name": "Mr. Joel V. Padilla",
+      "position": "Municipal Agriculturist",
+      "office": "LGU Nasipit — OMAg",
+      "contact": "0917-000-0011"
+    },
+    "topography": {
+      "terrain": "Gently rolling",
+      "slopePercent": "5–12%",
+      "elevationRangeMasl": "50–110",
+      "climate": "Type II"
+    },
+    "plantingMaterials": {
+      "fertilizers": [
+        "Complete 14-14-14",
+        "Vermicast"
+      ],
+      "soilAmendments": [
+        "Compost"
+      ],
+      "pestManagement": [
+        "Sanitation pruning"
+      ],
+      "practices": [
+        "Coconut intercrop"
+      ]
+    },
+    "yieldEstimateKgPerYear": 2400,
+    "photos": [],
+    "notes": "",
+    "createdAt": "2026-05-20",
+    "updatedAt": "2026-08-03"
+  },
+  {
+    "id": "adn-btn-012",
+    "name": "Anticala Watershed Coffee Farm",
+    "slug": "anticala-watershed-coffee-farm",
+    "status": "active",
+    "municipality": "Butuan City",
+    "barangay": "Anticala",
+    "geotag": {
+      "lat": 8.9475,
+      "lng": 125.6406,
+      "elevationMasl": 340
+    },
+    "areaHectares": 10.4,
+    "varieties": [
+      "Robusta",
+      "Arabica (Typica)"
+    ],
+    "soilType": "Clay loam",
+    "farmers": {
+      "count": 29,
+      "association": "Anticala Watershed Farmers Association",
+      "leadFarmer": "Bernardo T. Sumalinog",
+      "notes": "Agroforestry arrangement within watershed buffer."
+    },
+    "motherGarden": {
+      "exists": true,
+      "type": "Greenhouse",
+      "name": "Anticala Agroforestry Greenhouse",
+      "nurseryPlants": 12500,
+      "establishedYear": 2021
+    },
+    "seedTraceability": {
+      "source": "DA-RFO XIII Coffee Nursery, Butuan City",
+      "origin": "Mixed — Cavite Arabica, Bukidnon Robusta",
+      "batch": "MIX-2021-009",
+      "yearAcquired": 2021,
+      "certification": "DA-BPI accredited source"
+    },
+    "focalPerson": {
+      "name": "Ms. Anna Liza P. Estorba",
+      "position": "City Agriculturist Staff — Coffee Focal",
+      "office": "Butuan City Agriculture Office",
+      "contact": "0917-000-0012"
+    },
+    "topography": {
+      "terrain": "Hilly, forest-edge",
+      "slopePercent": "20–35%",
+      "elevationRangeMasl": "280–450",
+      "climate": "Type II"
+    },
+    "plantingMaterials": {
+      "fertilizers": [
+        "Vermicast",
+        "Complete 14-14-14",
+        "Foliar organic"
+      ],
+      "soilAmendments": [
+        "Lime",
+        "Coffee pulp compost"
+      ],
+      "pestManagement": [
+        "Beauveria bassiana",
+        "IPM protocol"
+      ],
+      "practices": [
+        "Agroforestry with native trees",
+        "No-burn policy",
+        "Contour hedgerows"
+      ]
+    },
+    "yieldEstimateKgPerYear": 7900,
+    "photos": [],
+    "notes": "Watershed protection area — organic-leaning practices.",
+    "createdAt": "2026-06-01",
+    "updatedAt": "2026-08-20"
+  }
+]

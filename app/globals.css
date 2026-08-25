@@ -1,0 +1,76 @@
+@import 'leaflet/dist/leaflet.css';
+@import '@fortawesome/fontawesome-svg-core/styles.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bean: #2b1b12;
+  --brew: #6f4e37;
+  --crema: #c8a27a;
+  --foam: #f3e9dd;
+}
+
+html,
+body {
+  background: var(--foam);
+  color: var(--bean);
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold transition;
+  }
+  .btn-primary {
+    @apply btn bg-brew text-milk hover:bg-roast shadow-soft;
+  }
+  .btn-ghost {
+    @apply btn border border-crema/60 bg-transparent text-bean hover:bg-crema/20;
+  }
+  .btn-danger {
+    @apply btn bg-cherry text-white hover:brightness-90;
+  }
+  .card {
+    @apply rounded-2xl border border-crema/40 bg-milk p-5 shadow-soft;
+  }
+  .label {
+    @apply mb-1 block text-xs font-semibold uppercase tracking-wide text-brew;
+  }
+  .input {
+    @apply w-full rounded-lg border border-crema/70 bg-white px-3 py-2 text-sm text-bean outline-none focus:border-brew focus:ring-2 focus:ring-brew/20;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full bg-crema/30 px-2.5 py-1 text-xs font-medium text-roast;
+  }
+  .section-title {
+    @apply font-display text-3xl font-bold text-bean sm:text-4xl;
+  }
+}
+
+/* Leaflet tweaks */
+.leaflet-container {
+  font-family: inherit;
+  background: #dfd6c9;
+}
+.leaflet-popup-content-wrapper {
+  border-radius: 14px;
+  box-shadow: 0 12px 32px -12px rgba(43, 27, 18, 0.5);
+}
+.leaflet-popup-content {
+  margin: 12px 14px;
+}
+.adn-pin {
+  background: transparent;
+  border: 0;
+}
+
+/* Thin scrollbar for the farm list panel */
+.scroll-slim::-webkit-scrollbar {
+  width: 8px;
+}
+.scroll-slim::-webkit-scrollbar-thumb {
+  background: rgba(111, 78, 55, 0.35);
+  border-radius: 8px;
+}
