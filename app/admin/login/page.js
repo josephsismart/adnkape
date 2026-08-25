@@ -22,16 +22,21 @@ function LoginForm() {
     const res = await fetch('/api/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ username, password }),
+      body: JSON.stringify({ username: username.trim(), password }),
     });
+
     if (res.ok) {
-      router.push(params.get('next') || '/admin');
-      router.refresh();
-    } else {
-      const data = await res.json().catch(() => ({}));
-      setError(data.error || 'Login failed.');
-      setBusy(false);
+      // Hard navigation on purpose. router.push() can replay the App Router's
+      // cached RSC payload for /admin — which is the middleware redirect back
+      // to this page — so the login appears to silently fail.
+      const next = params.get('next') || '/admin';
+      window.location.assign(next.startsWith('/') ? next : '/admin');
+      return;
     }
+
+    const data = await res.json().catch(() => ({}));
+    setError(data.error || 'Login failed.');
+    setBusy(false);
   }
 
   return (
@@ -54,6 +59,9 @@ function LoginForm() {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           autoComplete="username"
+          autoCapitalize="none"
+          autoCorrect="off"
+          spellCheck={false}
           required
         />
 
@@ -79,11 +87,6 @@ function LoginForm() {
           {busy && <FontAwesomeIcon icon={faSpinner} spin />}
           Sign in
         </button>
-
-        <p className="mt-4 text-center text-xs text-brew">
-          Credentials are set with <code>ADMIN_USERNAME</code> / <code>ADMIN_PASSWORD</code>{' '}
-          in your environment file.
-        </p>
       </form>
     </div>
   );
