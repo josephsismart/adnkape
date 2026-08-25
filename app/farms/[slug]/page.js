@@ -23,7 +23,30 @@ export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }) {
   const farm = await getFarmBySlug(params.slug);
-  return { title: farm ? `${farm.name} — ADN Kape` : 'Farm not found — ADN Kape' };
+  if (!farm) return { title: 'Farm not found' };
+
+  const description = `${farm.name} — Brgy. ${farm.barangay}, ${farm.municipality}, Agusan del Norte. ${
+    (farm.varieties || []).join(', ')
+  } on ${farm.areaHectares} ha, ${farm.farmers?.count} farmers.`;
+
+  return {
+    title: farm.name,
+    description,
+    alternates: { canonical: `/farms/${farm.slug}` },
+    openGraph: {
+      type: 'article',
+      title: `${farm.name} — ADN Kape`,
+      description,
+      url: `/farms/${farm.slug}`,
+      images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${farm.name} — ADN Kape`,
+      description,
+      images: ['/og-image.png'],
+    },
+  };
 }
 
 export default async function FarmPage({ params }) {
@@ -35,12 +58,12 @@ export default async function FarmPage({ params }) {
   );
 
   return (
-    <div className="mx-auto max-w-7xl px-5 py-10">
+    <div className="mx-auto max-w-content px-5 py-10">
       <Link href="/farms" className="mb-6 inline-flex items-center gap-2 text-sm font-semibold text-brew hover:underline">
         <FontAwesomeIcon icon={faArrowLeft} /> Back to directory
       </Link>
 
-      <header className="rounded-3xl bg-bean px-8 py-10 text-foam shadow-soft">
+      <header className="relative overflow-hidden rounded-xl border border-line bg-bean px-8 py-10 text-foam shadow-soft grain">
         <span className="chip !bg-white/10 !text-crema capitalize">{farm.status}</span>
         <h1 className="mt-3 font-display text-3xl font-bold text-milk sm:text-4xl">
           {farm.name}
@@ -65,7 +88,7 @@ export default async function FarmPage({ params }) {
         </div>
       </header>
 
-      <div className="mt-8 grid gap-5 lg:grid-cols-3">
+      <div className="mt-6 grid gap-5 lg:grid-cols-3">
         <Panel icon={faMugHot} title="Variety & soil">
           <Row label="Varieties" value={(farm.varieties || []).join(', ')} />
           <Row label="Soil type" value={farm.soilType} />
@@ -155,7 +178,7 @@ export default async function FarmPage({ params }) {
       </div>
 
       {farm.notes && (
-        <p className="mt-5 rounded-2xl border border-crema/40 bg-milk p-5 text-sm text-roast">
+        <p className="mt-5 rounded-lg border border-line bg-white p-5 text-sm text-roast">
           <strong className="text-bean">Notes: </strong>
           {farm.notes}
         </p>
@@ -177,7 +200,7 @@ export default async function FarmPage({ params }) {
 
 function HeadStat({ icon, label, value }) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+    <div className="rounded-lg border border-white/12 bg-white/[0.06] p-4">
       <FontAwesomeIcon icon={icon} className="text-crema" />
       <div className="mt-1.5 font-display text-xl font-bold text-milk">{value}</div>
       <div className="text-[11px] uppercase tracking-wide text-foam/60">{label}</div>

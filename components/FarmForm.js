@@ -93,7 +93,7 @@ export default function FarmForm({ initial, mode = 'create' }) {
   };
 
   return (
-    <form onSubmit={onSubmit} className="mx-auto max-w-5xl px-5 py-10">
+    <form onSubmit={onSubmit} className="mx-auto max-w-5xl px-5 py-12">
       <Link href="/admin" className="mb-5 inline-flex items-center gap-2 text-sm font-semibold text-brew hover:underline">
         <FontAwesomeIcon icon={faArrowLeft} /> Back to admin
       </Link>
@@ -197,7 +197,7 @@ export default function FarmForm({ initial, mode = 'create' }) {
                   className={`rounded-full border px-3 py-1.5 text-xs font-medium transition ${
                     farm.varieties?.includes(v)
                       ? 'border-brew bg-brew text-milk'
-                      : 'border-crema/70 bg-white text-roast hover:border-brew'
+                      : 'border-line bg-white text-roast hover:border-brew'
                   }`}
                 >
                   {v}
@@ -404,7 +404,7 @@ export default function FarmForm({ initial, mode = 'create' }) {
         </Section>
       </div>
 
-      <div className="sticky bottom-4 mt-8 flex justify-end gap-2 rounded-2xl border border-crema/50 bg-milk/95 p-3 shadow-soft backdrop-blur">
+      <div className="sticky bottom-4 mt-8 flex justify-end gap-2 rounded-lg border border-line bg-white/95 p-3 shadow-lift backdrop-blur">
         <Link href="/admin" className="btn-ghost">
           Cancel
         </Link>

@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic';
 const FarmMap = dynamic(() => import('./FarmMap'), {
   ssr: false,
   loading: () => (
-    <div className="grid h-[620px] place-items-center rounded-2xl border border-crema/50 bg-crema/10 text-sm text-brew">
+    <div className="grid h-[620px] place-items-center rounded-xl border border-line bg-foam/50 text-sm text-brew">
       Loading map…
     </div>
   ),

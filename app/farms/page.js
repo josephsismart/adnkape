@@ -22,26 +22,30 @@ export default async function FarmsPage() {
   }, {});
 
   return (
-    <div className="mx-auto max-w-7xl px-5 py-14">
+    <div className="mx-auto max-w-content px-5 py-14">
+      <p className="eyebrow mb-2">Registry</p>
       <h1 className="section-title">Farm directory</h1>
-      <p className="mt-2 max-w-2xl text-brew">
+      <p className="lede mt-3 max-w-2xl">
         {farms.length} coffee farms across {Object.keys(byMunicipality).length} cities and
         municipalities of Agusan del Norte.
       </p>
 
-      <div className="mt-10 space-y-12">
+      <div className="mt-12 space-y-14">
         {Object.keys(byMunicipality)
           .sort()
           .map((mun) => (
             <section key={mun}>
-              <h2 className="mb-4 flex items-center gap-2 font-display text-xl font-bold text-bean">
-                <FontAwesomeIcon icon={faLocationDot} className="text-brew" />
-                {mun}
-                <span className="chip ml-1">{byMunicipality[mun].length}</span>
-              </h2>
+              <div className="mb-5 flex items-center gap-3">
+                <h2 className="flex items-center gap-2 font-display text-xl font-bold text-bean">
+                  <FontAwesomeIcon icon={faLocationDot} className="text-[15px] text-brew" />
+                  {mun}
+                </h2>
+                <span className="chip">{byMunicipality[mun].length}</span>
+                <span className="h-px flex-1 bg-line" />
+              </div>
               <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                 {byMunicipality[mun].map((f) => (
-                  <Link key={f.id} href={`/farms/${f.slug}`} className="card group flex flex-col transition hover:-translate-y-0.5 hover:shadow-lg">
+                  <Link key={f.id} href={`/farms/${f.slug}`} className="card group flex flex-col transition duration-200 hover:-translate-y-0.5 hover:border-crema hover:shadow-lift">
                     <div className="flex items-start justify-between gap-3">
                       <h3 className="font-display text-lg font-bold text-bean group-hover:text-brew">
                         {f.name}

@@ -28,11 +28,12 @@ function pinIcon(status) {
   return L.divIcon({
     className: 'adn-pin',
     html: `
-      <div style="transform:translate(-50%,-100%)">
+      <div style="transform:translate(-50%,-100%);filter:drop-shadow(0 3px 5px rgba(43,27,18,.45))">
         <svg width="30" height="40" viewBox="0 0 30 40" xmlns="http://www.w3.org/2000/svg">
           <path d="M15 0C6.7 0 0 6.7 0 15c0 10.6 13.2 23.5 13.8 24.1a1.7 1.7 0 0 0 2.4 0C16.8 38.5 30 25.6 30 15 30 6.7 23.3 0 15 0z" fill="${color}"/>
-          <circle cx="15" cy="14.5" r="6.4" fill="#F3E9DD"/>
-          <path d="M15 9.6c1.9 2 1.9 7.8 0 9.8-1.9-2-1.9-7.8 0-9.8z" fill="${color}"/>
+          <path d="M15 0C6.7 0 0 6.7 0 15c0 10.6 13.2 23.5 13.8 24.1a1.7 1.7 0 0 0 2.4 0C16.8 38.5 30 25.6 30 15 30 6.7 23.3 0 15 0z" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="1.2"/>
+          <ellipse cx="15" cy="14.6" rx="5.2" ry="6.8" fill="#F3E9DD"/>
+          <path d="M15 8.2c1.7 2.7 1.7 10.1 0 12.8" fill="none" stroke="${color}" stroke-width="1.7" stroke-linecap="round"/>
         </svg>
       </div>`,
     iconSize: [30, 40],
@@ -139,7 +140,7 @@ export default function FarmMap({ farms, height = '620px' }) {
             <button
               key={f.id}
               onClick={() => setTarget({ ...f.geotag, id: f.id })}
-              className="w-full rounded-xl border border-crema/40 bg-milk p-3 text-left transition hover:border-brew hover:shadow-soft"
+              className="w-full rounded-lg border border-line bg-white p-3.5 text-left transition hover:border-crema hover:shadow-soft"
             >
               <div className="flex items-start justify-between gap-2">
                 <div>
@@ -187,7 +188,7 @@ export default function FarmMap({ farms, height = '620px' }) {
 
       {/* Map */}
       <div
-        className="overflow-hidden rounded-2xl border border-crema/50 shadow-soft"
+        className="overflow-hidden rounded-xl border border-line shadow-soft"
         style={{ height }}
       >
         <MapContainer

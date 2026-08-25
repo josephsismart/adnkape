@@ -5,61 +5,93 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --bean: #2b1b12;
-  --brew: #6f4e37;
-  --crema: #c8a27a;
-  --foam: #f3e9dd;
-}
-
-html,
-body {
-  background: var(--foam);
-  color: var(--bean);
-  -webkit-font-smoothing: antialiased;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-paper text-ink antialiased;
+  }
+  ::selection {
+    background: #c8a27a;
+    color: #2b1b12;
+  }
 }
 
 @layer components {
+  /* ---------- buttons ---------- */
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold transition;
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2.5 text-sm font-semibold tracking-tight transition duration-200;
   }
   .btn-primary {
-    @apply btn bg-brew text-milk hover:bg-roast shadow-soft;
+    @apply btn bg-brew text-milk shadow-soft hover:bg-roast;
   }
   .btn-ghost {
-    @apply btn border border-crema/60 bg-transparent text-bean hover:bg-crema/20;
+    @apply btn border border-line bg-white/70 text-roast hover:border-crema hover:bg-foam;
   }
   .btn-danger {
-    @apply btn bg-cherry text-white hover:brightness-90;
+    @apply btn bg-cherry text-white hover:brightness-95;
   }
+  .btn-onDark {
+    @apply btn bg-crema text-bean hover:bg-foam;
+  }
+  .btn-onDarkGhost {
+    @apply btn border border-white/25 text-foam hover:bg-white/10;
+  }
+
+  /* ---------- surfaces ---------- */
   .card {
-    @apply rounded-2xl border border-crema/40 bg-milk p-5 shadow-soft;
+    @apply rounded-lg border border-line bg-white p-5 shadow-soft;
   }
+  .panel {
+    @apply rounded-lg border border-line bg-white shadow-soft;
+  }
+
+  /* ---------- forms ---------- */
   .label {
-    @apply mb-1 block text-xs font-semibold uppercase tracking-wide text-brew;
+    @apply mb-1.5 block text-[11px] font-semibold uppercase tracking-official text-brew;
   }
   .input {
-    @apply w-full rounded-lg border border-crema/70 bg-white px-3 py-2 text-sm text-bean outline-none focus:border-brew focus:ring-2 focus:ring-brew/20;
+    @apply w-full rounded-md border border-line bg-white px-3 py-2 text-sm text-ink outline-none transition placeholder:text-brew/45 focus:border-brew focus:ring-2 focus:ring-brew/15;
   }
-  .chip {
-    @apply inline-flex items-center gap-1.5 rounded-full bg-crema/30 px-2.5 py-1 text-xs font-medium text-roast;
+
+  /* ---------- typography ---------- */
+  .eyebrow {
+    @apply text-[11px] font-semibold uppercase tracking-official text-brew;
   }
   .section-title {
-    @apply font-display text-3xl font-bold text-bean sm:text-4xl;
+    @apply font-display text-[1.75rem] font-bold leading-tight text-bean sm:text-4xl;
+  }
+  .lede {
+    @apply text-[15px] leading-relaxed text-roast/85;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-line bg-foam/70 px-2.5 py-1 text-[11px] font-medium text-roast;
+  }
+  .rule {
+    @apply h-px w-full bg-line;
   }
 }
 
-/* Leaflet tweaks */
+/* ---------- Leaflet ---------- */
 .leaflet-container {
   font-family: inherit;
-  background: #dfd6c9;
+  background: #e7ded2;
 }
 .leaflet-popup-content-wrapper {
-  border-radius: 14px;
-  box-shadow: 0 12px 32px -12px rgba(43, 27, 18, 0.5);
+  border-radius: 10px;
+  border: 1px solid #e6dacb;
+  box-shadow: 0 18px 44px -20px rgba(43, 27, 18, 0.55);
 }
 .leaflet-popup-content {
-  margin: 12px 14px;
+  margin: 13px 15px;
+}
+.leaflet-popup-tip {
+  border-top-color: #fff;
+}
+.leaflet-bar a,
+.leaflet-control-layers-toggle {
+  border-color: #e6dacb !important;
 }
 .adn-pin {
   background: transparent;
@@ -67,10 +99,23 @@ body {
 }
 
 /* Thin scrollbar for the farm list panel */
+.scroll-slim {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(111, 78, 55, 0.32) transparent;
+}
 .scroll-slim::-webkit-scrollbar {
-  width: 8px;
+  width: 7px;
 }
 .scroll-slim::-webkit-scrollbar-thumb {
-  background: rgba(111, 78, 55, 0.35);
+  background: rgba(111, 78, 55, 0.32);
   border-radius: 8px;
+}
+
+/* Subtle paper grain for dark sections */
+.grain {
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.055) 1px,
+    transparent 1px
+  );
+  background-size: 4px 4px;
 }

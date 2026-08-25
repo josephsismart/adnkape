@@ -41,7 +41,7 @@ export default function AdminFarmTable({ farms, readOnly }) {
 
   return (
     <div className="card !p-0">
-      <div className="border-b border-crema/40 p-4">
+      <div className="border-b border-line p-4">
         <div className="relative max-w-sm">
           <FontAwesomeIcon
             icon={faMagnifyingGlass}
@@ -59,7 +59,7 @@ export default function AdminFarmTable({ farms, readOnly }) {
 
       <div className="overflow-x-auto">
         <table className="w-full text-left text-sm">
-          <thead className="bg-crema/20 text-xs uppercase tracking-wide text-brew">
+          <thead className="border-b border-line bg-foam text-[10px] uppercase tracking-official text-brew">
             <tr>
               <th className="px-4 py-3">Farm</th>
               <th className="px-4 py-3">Location</th>
@@ -73,7 +73,7 @@ export default function AdminFarmTable({ farms, readOnly }) {
           </thead>
           <tbody>
             {rows.map((f) => (
-              <tr key={f.id} className="border-t border-crema/30 hover:bg-crema/10">
+              <tr key={f.id} className="border-t border-line hover:bg-foam/50">
                 <td className="px-4 py-3">
                   <div className="font-semibold text-bean">{f.name}</div>
                   <div className="text-[11px] text-brew">{f.id}</div>
@@ -95,14 +95,14 @@ export default function AdminFarmTable({ farms, readOnly }) {
                     <Link
                       href={`/farms/${f.slug}`}
                       title="View public page"
-                      className="rounded-lg px-2 py-1.5 text-brew hover:bg-crema/30"
+                      className="rounded-lg px-2 py-1.5 text-brew hover:bg-foam"
                     >
                       <FontAwesomeIcon icon={faEye} />
                     </Link>
                     <Link
                       href={`/admin/farms/${f.id}`}
                       title="Edit"
-                      className="rounded-lg px-2 py-1.5 text-brew hover:bg-crema/30"
+                      className="rounded-lg px-2 py-1.5 text-brew hover:bg-foam"
                     >
                       <FontAwesomeIcon icon={faPenToSquare} />
                     </Link>

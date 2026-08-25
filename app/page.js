@@ -12,9 +12,12 @@ import {
   faBarcode,
   faUserTie,
   faArrowRight,
+  faCircleCheck,
+  faWeightHanging,
 } from '@fortawesome/free-solid-svg-icons';
 import { getFarms, summarize } from '@/lib/store';
 import MapSection from '@/components/MapSection';
+import { Seal, CoffeeBean, BeanDivider } from '@/components/Brand';
 
 export const dynamic = 'force-dynamic';
 
@@ -26,130 +29,178 @@ const FIELDS = [
   { icon: faUsers, title: 'Farmers', body: 'Headcount, associations and lead farmers behind each production area.' },
   { icon: faSeedling, title: 'Mother garden', body: 'Nurseries and greenhouses, with live counts of seedlings on hand.' },
   { icon: faBarcode, title: 'Seed traceability', body: 'Where the planting material came from, its batch and certification.' },
-  { icon: faUserTie, title: 'Focal person', body: 'The city/municipal agriculture contact accountable for the site.' },
+  { icon: faUserTie, title: 'Focal person', body: 'The city or municipal agriculture contact accountable for the site.' },
   { icon: faMountainSun, title: 'Topography', body: 'Terrain, slope, elevation band and climate type of the growing area.' },
   { icon: faLeaf, title: 'Planting materials', body: 'Fertilizers, amendments, pest management and field practices in use.' },
+  { icon: faCircleCheck, title: 'Production status', body: 'Whether a site is in full production, expanding, piloting or dormant.' },
+  { icon: faWeightHanging, title: 'Yield estimate', body: 'Expected annual green bean volume, for supply and market planning.' },
 ];
 
 export default async function HomePage() {
   const farms = await getFarms();
-  const stats = summarize(farms);
+  const s = summarize(farms);
 
   return (
     <>
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-bean text-foam">
+      {/* ---------------------------------------------------------- Hero */}
+      <section className="relative overflow-hidden border-b border-line bg-bean text-foam grain">
         <div
           aria-hidden
-          className="absolute inset-0 opacity-25"
+          className="absolute inset-0 opacity-70"
           style={{
             backgroundImage:
-              'radial-gradient(circle at 20% 20%, #6F4E37 0, transparent 45%), radial-gradient(circle at 80% 0%, #4F7942 0, transparent 40%), radial-gradient(circle at 60% 90%, #B23A2E 0, transparent 45%)',
+              'radial-gradient(ellipse 60% 70% at 12% 15%, rgba(111,78,55,.85) 0, transparent 60%), radial-gradient(ellipse 50% 60% at 88% 8%, rgba(79,121,66,.45) 0, transparent 62%), radial-gradient(ellipse 70% 60% at 70% 100%, rgba(178,58,46,.28) 0, transparent 60%)',
           }}
         />
-        <div className="relative mx-auto grid max-w-7xl gap-10 px-5 py-20 lg:grid-cols-2 lg:py-28">
+        {/* seal watermark */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -right-16 top-1/2 hidden -translate-y-1/2 opacity-[0.07] lg:block"
+        >
+          <Seal size={560} />
+        </div>
+
+        <div className="relative mx-auto grid max-w-content items-center gap-14 px-5 py-20 lg:grid-cols-[1.15fr_1fr] lg:py-28">
           <div>
-            <span className="chip !bg-crema/20 !text-crema">
-              <FontAwesomeIcon icon={faMapLocationDot} />
-              Agusan del Norte · Coffee Registry
-            </span>
-            <h1 className="mt-5 font-display text-4xl font-bold leading-tight text-milk sm:text-5xl lg:text-6xl">
+            <div className="mb-6 flex items-center gap-3">
+              <Seal size={54} priority />
+              <span className="text-[10px] font-semibold uppercase leading-relaxed tracking-official text-crema">
+                Province of Agusan del Norte
+                <span className="block text-foam/55">Coffee Farm Registry</span>
+              </span>
+            </div>
+
+            <h1 className="font-display text-[2.6rem] font-bold leading-[1.08] text-milk sm:text-5xl lg:text-[3.5rem]">
               Every coffee farm in the province,
               <span className="text-crema"> on one map.</span>
             </h1>
-            <p className="mt-5 max-w-xl text-lg leading-relaxed text-foam/85">
+
+            <p className="mt-6 max-w-xl text-[16px] leading-relaxed text-foam/80">
               ADN Kape brings together the location, variety, soil, nursery stock, seed
               origin and people behind each coffee farm in Agusan del Norte — so planning,
               sourcing and support decisions rest on the same picture.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="#map" className="btn-primary !bg-crema !text-bean hover:!bg-foam">
-                <FontAwesomeIcon icon={faMapLocationDot} />
+
+            <div className="mt-9 flex flex-wrap gap-3">
+              <Link href="#map" className="btn-onDark">
+                <FontAwesomeIcon icon={faMapLocationDot} className="text-[13px]" />
                 Explore the map
               </Link>
-              <Link href="/farms" className="btn-ghost !border-foam/30 !text-foam hover:!bg-white/10">
+              <Link href="/farms" className="btn-onDarkGhost">
                 Browse farm directory
-                <FontAwesomeIcon icon={faArrowRight} />
+                <FontAwesomeIcon icon={faArrowRight} className="text-[12px]" />
               </Link>
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-3 self-center sm:grid-cols-3 lg:grid-cols-2">
-            <Stat icon={faMapLocationDot} value={stats.farms} label="Farms mapped" />
-            <Stat icon={faRulerCombined} value={`${stats.hectares}`} label="Hectares" />
-            <Stat icon={faUsers} value={stats.farmers} label="Farmers" />
-            <Stat icon={faSeedling} value={stats.nurseryPlants.toLocaleString()} label="Nursery plants" />
-            <Stat icon={faMugHot} value={stats.varieties} label="Varieties" />
-            <Stat icon={faLeaf} value={stats.municipalities} label="Cities / municipalities" />
+          {/* Stat board */}
+          <div className="rounded-xl border border-white/12 bg-white/[0.045] p-6 backdrop-blur-sm">
+            <div className="mb-5 flex items-center gap-2">
+              <CoffeeBean size={12} className="text-crema" />
+              <span className="text-[10px] font-semibold uppercase tracking-official text-crema">
+                At a glance
+              </span>
+            </div>
+            <dl className="grid grid-cols-2 gap-x-6 gap-y-7">
+              <Stat value={s.farms} label="Farms mapped" />
+              <Stat value={s.hectares} label="Hectares" />
+              <Stat value={s.farmers} label="Farmers" />
+              <Stat value={s.nurseryPlants.toLocaleString()} label="Nursery plants" />
+              <Stat value={s.varieties} label="Varieties" />
+              <Stat value={s.municipalities} label="Cities / municipalities" />
+            </dl>
           </div>
         </div>
       </section>
 
-      {/* Map */}
-      <section id="map" className="mx-auto max-w-7xl scroll-mt-20 px-5 py-16">
-        <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
-          <div>
+      {/* ---------------------------------------------------------- Map */}
+      <section id="map" className="mx-auto max-w-content scroll-mt-24 px-5 py-20">
+        <div className="mb-8 flex flex-wrap items-end justify-between gap-5">
+          <div className="max-w-2xl">
+            <p className="eyebrow mb-2">Interactive map</p>
             <h2 className="section-title">Coffee farm map</h2>
-            <p className="mt-2 max-w-2xl text-brew">
-              Filter by municipality or variety, then click a pin for the farm profile —
-              nursery stock, seed source, focal person and field practices.
+            <p className="lede mt-3">
+              Filter by municipality or variety, then select a pin for the full farm
+              profile — nursery stock, seed source, focal person and field practices.
             </p>
           </div>
           <Link href="/farms" className="btn-ghost">
-            Directory view <FontAwesomeIcon icon={faArrowRight} />
+            Directory view <FontAwesomeIcon icon={faArrowRight} className="text-[12px]" />
           </Link>
         </div>
         <MapSection farms={farms} />
       </section>
 
-      {/* What we record */}
-      <section id="about" className="scroll-mt-20 bg-milk py-20">
-        <div className="mx-auto max-w-7xl px-5">
-          <h2 className="section-title">What we record for every farm</h2>
-          <p className="mt-2 max-w-2xl text-brew">
-            One consistent profile per site, so figures can be compared across barangays
-            and rolled up to the provincial level without re-collecting data.
-          </p>
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {/* ---------------------------------------------------------- Fields */}
+      <section id="about" className="scroll-mt-24 border-y border-line bg-white py-20">
+        <div className="mx-auto max-w-content px-5">
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="eyebrow mb-2">The record</p>
+            <h2 className="section-title">What we record for every farm</h2>
+            <p className="lede mt-3">
+              One consistent profile per site, so figures can be compared across barangays
+              and rolled up to the provincial level without re-collecting data.
+            </p>
+            <BeanDivider className="mx-auto mt-8 max-w-xs" />
+          </div>
+
+          <div className="mt-12 grid gap-px overflow-hidden rounded-xl border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
             {FIELDS.map((f) => (
-              <div key={f.title} className="card transition hover:-translate-y-0.5 hover:shadow-lg">
-                <span className="mb-3 grid h-10 w-10 place-items-center rounded-xl bg-brew/10 text-brew">
-                  <FontAwesomeIcon icon={f.icon} />
+              <div key={f.title} className="group bg-white p-6 transition hover:bg-foam/50">
+                <span className="mb-4 grid h-10 w-10 place-items-center rounded-md border border-line bg-foam text-brew transition group-hover:border-crema group-hover:bg-brew group-hover:text-milk">
+                  <FontAwesomeIcon icon={f.icon} className="text-[15px]" />
                 </span>
-                <h3 className="font-display text-lg font-bold text-bean">{f.title}</h3>
-                <p className="mt-1 text-sm leading-relaxed text-roast/85">{f.body}</p>
+                <h3 className="font-display text-[17px] font-bold text-bean">{f.title}</h3>
+                <p className="mt-1.5 text-[13.5px] leading-relaxed text-roast/80">{f.body}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="mx-auto max-w-7xl px-5 py-20">
-        <div className="rounded-3xl bg-brew px-8 py-14 text-center text-milk shadow-soft">
-          <FontAwesomeIcon icon={faMugHot} className="text-3xl text-crema" />
-          <h2 className="mt-4 font-display text-3xl font-bold sm:text-4xl">
-            Have farm data to add?
-          </h2>
-          <p className="mx-auto mt-3 max-w-xl text-foam/85">
-            City and municipal agriculture offices can register new farms, update nursery
-            counts and record seed sources through the admin panel.
-          </p>
-          <Link href="/admin" className="btn-primary mt-7 !bg-crema !text-bean hover:!bg-foam">
-            Go to admin panel <FontAwesomeIcon icon={faArrowRight} />
-          </Link>
+      {/* ---------------------------------------------------------- CTA */}
+      <section className="mx-auto max-w-content px-5 py-20">
+        <div className="relative overflow-hidden rounded-xl border border-line bg-bean px-8 py-14 text-center text-milk grain">
+          <div
+            aria-hidden
+            className="absolute inset-0 opacity-60"
+            style={{
+              backgroundImage:
+                'radial-gradient(ellipse 50% 90% at 50% 0%, rgba(111,78,55,.9) 0, transparent 65%)',
+            }}
+          />
+          <div className="relative">
+            <div className="mb-5 flex justify-center gap-2">
+              <CoffeeBean size={13} className="rotate-[-20deg] text-crema/70" />
+              <CoffeeBean size={16} className="text-crema" />
+              <CoffeeBean size={13} className="rotate-[20deg] text-crema/70" />
+            </div>
+            <h2 className="font-display text-3xl font-bold sm:text-[2.4rem]">
+              Have farm data to add?
+            </h2>
+            <p className="mx-auto mt-4 max-w-xl text-[15px] leading-relaxed text-foam/80">
+              City and municipal agriculture offices can register new farms, update nursery
+              counts and record seed sources through the admin panel.
+            </p>
+            <Link href="/admin" className="btn-onDark mt-8">
+              Go to admin panel <FontAwesomeIcon icon={faArrowRight} className="text-[12px]" />
+            </Link>
+          </div>
         </div>
       </section>
     </>
   );
 }
 
-function Stat({ icon, value, label }) {
+function Stat({ value, label }) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">
-      <FontAwesomeIcon icon={icon} className="text-crema" />
-      <div className="mt-2 font-display text-2xl font-bold text-milk">{value}</div>
-      <div className="text-[11px] uppercase tracking-wide text-foam/60">{label}</div>
+    <div>
+      <dt className="text-[10px] font-semibold uppercase tracking-official text-foam/50">
+        {label}
+      </dt>
+      <dd className="mt-1 font-display text-[1.9rem] font-bold leading-none text-milk">
+        {value}
+      </dd>
     </div>
   );
 }

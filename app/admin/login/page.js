@@ -4,7 +4,8 @@ import { useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Suspense } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMugHot, faLock, faUser, faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { faLock, faUser, faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { Seal, BeanDivider } from '@/components/Brand';
 
 function LoginForm() {
   const router = useRouter();
@@ -34,14 +35,13 @@ function LoginForm() {
   }
 
   return (
-    <div className="mx-auto grid min-h-[70vh] max-w-md place-items-center px-5">
+    <div className="mx-auto grid min-h-[70vh] max-w-md place-items-center px-5 py-12">
       <form onSubmit={onSubmit} className="card w-full">
-        <div className="mb-6 text-center">
-          <span className="mx-auto grid h-12 w-12 place-items-center rounded-2xl bg-brew text-milk">
-            <FontAwesomeIcon icon={faMugHot} className="text-xl" />
-          </span>
-          <h1 className="mt-3 font-display text-2xl font-bold text-bean">Admin sign in</h1>
-          <p className="text-sm text-brew">ADN Kape farm data management</p>
+        <div className="mb-7 text-center">
+          <Seal size={62} className="mx-auto" />
+          <h1 className="mt-4 font-display text-2xl font-bold text-bean">Admin sign in</h1>
+          <p className="mt-1 text-[13px] text-brew">ADN Kape · Farm data management</p>
+          <BeanDivider className="mt-5" />
         </div>
 
         <label className="label" htmlFor="username">

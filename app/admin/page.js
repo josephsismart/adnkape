@@ -32,9 +32,10 @@ export default async function AdminPage() {
   const session = getSession();
 
   return (
-    <div className="mx-auto max-w-7xl px-5 py-10">
+    <div className="mx-auto max-w-content px-5 py-10">
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
+          <p className="eyebrow mb-2">Administration</p>
           <h1 className="section-title">Farm data admin</h1>
           <p className="mt-1 text-brew">
             Signed in as <strong>{session?.username}</strong>
@@ -49,10 +50,10 @@ export default async function AdminPage() {
       </div>
 
       <div
-        className={`mt-6 flex items-start gap-3 rounded-xl p-4 text-sm ${
+        className={`mt-6 flex items-start gap-3 rounded-lg border p-4 text-sm ${
           mode === 'readonly'
-            ? 'bg-cherry/10 text-cherry'
-            : 'bg-leaf/10 text-leaf'
+            ? 'border-cherry/25 bg-cherry/8 text-cherry'
+            : 'border-leaf/25 bg-leaf/8 text-leaf'
         }`}
       >
         <FontAwesomeIcon
